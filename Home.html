@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Fest 2024</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            background: linear-gradient(135deg, #ff4081, #2196f3);
+            color: white;
+        }
+
+        /* Header */
+        header {
+            background-color:  black;
+            padding: 30px 0;
+            text-align: center;
+            position: relative;
+        }
+
+        header h1 {
+            font-size: 3.5em;
+            font-weight: bold;
+            color: #fff;
+            letter-spacing: 2px;
+            text-align: right;
+        }
+
+        /* Confetti effect */
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.3;
+            z-index: 1;
+        }
+
+        nav {
+            text-align: center;
+            z-index: 2;
+            position: relative;
+        }
+
+        nav a {
+            margin: 0 20px;
+            text-decoration: none;
+            color: white;
+            font-size: 1.3em;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #ffeb3b;
+        }
+
+        /* Carousel */
+        .carousel-container {
+            position: relative;
+            width: 100%;
+            max-width: 1200px;
+            margin: 30px auto;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .carousel-slide {
+            display: flex;
+            width: 100%;
+        }
+
+        .carousel-slide img {
+            width: 100%;
+            display: block;
+        }
+
+        /* Decorative arrows for carousel */
+        .carousel-container::before, 
+        .carousel-container::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 0; 
+            height: 0; 
+            border-style: solid;
+            cursor: pointer;
+        }
+
+        .carousel-container::before {
+            left: 20px;
+            border-width: 15px 20px 15px 0;
+            border-color: transparent white transparent transparent;
+        }
+
+        .carousel-container::after {
+            right: 20px;
+            border-width: 15px 0 15px 20px;
+            border-color: transparent transparent transparent white;
+        }
+
+        /* Overview Section */
+        .overview {
+            padding: 60px 20px;
+            text-align: center;
+            background: linear-gradient(135deg, orange , #ffeb3b, red);
+            color: #fff;
+        }
+
+        .overview h2 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .overview p {
+            font-size: 1.4em;
+            color: white;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        /* Event highlights section */
+        .event-highlights {
+            padding: 50px 20px;
+            text-align: center;
+            background: #fff;
+            color: #333;
+        }
+
+        .event-highlights h2 {
+            font-size: 2.5em;
+            color: 1;
+            margin-bottom: 30px;
+        }
+
+        .highlights-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .highlight-item {
+            background: #f1f1f1;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .highlight-item img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .highlight-item h3 {
+            font-size: 1.5em;
+            color: #ff4081;
+        }
+
+        .highlight-item p {
+            font-size: 1.1em;
+            color: #333;
+        }
+
+        /* Footer */
+        footer {
+            background: #333;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <img src="SYMPHONY LOGO.png">
+        <nav>
+            <a href="Login.html">Login</a> 
+            <a href="#about">About</a>
+            <a href="#schedule">Schedule</a>
+            <a href="merch.html">Merch</a>
+            <a href="#rules">Rules</a>
+            <a href="#contact">Contact</a>
+
+            
+            
+        </nav>
+    </header>
+
+    <!-- Carousel Section -->
+    <div class="carousel-container">
+        <div class="carousel-slide" id="carousel-slide">
+            <img src="symph1.jpeg" alt="Performance Highlight 1">
+            <img src="symph3.jpeg" alt="Performance Highlight 2">
+            <img src="symph2.jpeg" alt="Performance Highlight 3">
+        </div>
+    </div>
+
+    <!-- Overview Section -->
+    <section class="overview">
+        <h2>About the Event</h2>
+        <p>Get ready for College Fest 2024 – three unforgettable days of music, dance, creativity, and fun! Join us for exciting competitions, workshops, and electrifying performances that will keep you on your feet. It's a celebration like no other!</p>
+    </section>
+
+    <!-- Event Highlights Section -->
+    <section class="event-highlights">
+        <h2>Event Highlights</h2>
+        <div class="highlights-grid">
+            <div class="highlight-item">
+                <img src="https://via.placeholder.com/250x150.png?text=Music+Showcase" alt="Music Showcase">
+                <h3>Music Showcase</h3>
+                <p>Experience amazing live performances by top bands and solo artists from across the country.</p>
+            </div>
+            <div class="highlight-item">
+                <img src="https://via.placeholder.com/250x150.png?text=Dance+Battles" alt="Dance Battles">
+                <h3>Dance Battles</h3>
+                <p>Watch electrifying dance crews battle it out on stage with jaw-dropping moves.</p>
+            </div>
+            <div class="highlight-item">
+                <img src="https://via.placeholder.com/250x150.png?text=Art+Exhibition" alt="Art Exhibition">
+                <h3>Art Exhibition</h3>
+                <p>Marvel at the creative expressions of students through a stunning art exhibition.</p>
+            </div>
+            <div class="highlight-item">
+                <img src="https://via.placeholder.com/250x150.png?text=Workshops" alt="Workshops">
+                <h3>Workshops</h3>
+                <p>Engage in fun and interactive workshops on music, dance, and creative arts.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 College Fest. All Rights Reserved.</p>
+    </footer>
+
+    <!-- JavaScript for Automatic Slideshow -->
+    <script>
+        const carouselSlide = document.getElementById('carousel-slide');
+        const images = carouselSlide.querySelectorAll('img');
+
+        let counter = 0;
+        const size = images[0].clientWidth;
+
+        function slideShow() {
+            counter++;
+            if (counter >= images.length) {
+                counter = 0;
+            }
+            carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+        }
+
+        setInterval(slideShow, 3000);  // Change slide every 3 seconds
+    </script>
+
+</body>
+</html>

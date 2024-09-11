@@ -1,0 +1,79 @@
+/* Import the glitchy font */
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #0A0A33; /* Navy Blue background */
+  color: #F4A300; /* Saffron text color */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.page-title {
+  font-family: 'VT323', monospace; /* Dr Glitch-style font */
+  font-size: 3em;
+  color: #F4A300; /* Saffron color */
+  text-shadow: 2px 2px 4px #FFDC80;
+  animation: glitch 1s infinite;
+}
+
+/* Adding glitch effect to the title */
+@keyframes glitch {
+  0% {
+    text-shadow: 2px 2px 0px #FFDC80, -2px -2px 0px #F4A300;
+  }
+  50% {
+    text-shadow: -2px 2px 0px #F4A300, 2px -2px 0px #FFDC80;
+  }
+  100% {
+    text-shadow: 2px -2px 0px #FFDC80, -2px 2px 0px #F4A300;
+  }
+}
+
+.container {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  padding: 20px;
+}
+
+.product-card {
+  background-color: #1B1B55;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
+}
+
+.product-image {
+  width: 100%;
+  height: auto;
+}
+
+.product-title {
+  font-size: 1.5em;
+  color: #F4A300;
+  padding: 10px;
+}
+
+.product-price {
+  font-size: 1.2em;
+  color: #
