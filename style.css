@@ -9,27 +9,72 @@
 
 body {
   font-family: 'Arial', sans-serif;
-  background-color: #0A0A33; /* Navy Blue background */
+  background-color: #000000; /* Navy Blue background */
   color: #F4A300; /* Saffron text color */
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
+/* Header Styling */
 header {
-  text-align: center;
-  margin: 20px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+  z-index: 10;
 }
 
+header .logo img {
+  width: 180px;
+  height: 60px;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #ff4081;
+}
+
+/* Cart Icon */
+.cart-icon {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+
+/* Page Title Styling */
 .page-title {
-  font-family: 'VT323', monospace; /* Dr Glitch-style font */
+  margin-top: 100px; /* Adding space below the fixed header */
   font-size: 3em;
   color: #F4A300; /* Saffron color */
+  font-family: 'Righteous', cursive;
   text-shadow: 2px 2px 4px #FFDC80;
   animation: glitch 1s infinite;
 }
 
-/* Adding glitch effect to the title */
+/* Glitch Effect */
 @keyframes glitch {
   0% {
     text-shadow: 2px 2px 0px #FFDC80, -2px -2px 0px #F4A300;
@@ -42,15 +87,18 @@ header {
   }
 }
 
+/* Product Container */
 .container {
   display: grid;
   gap: 20px;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(2, 1fr); /* 2 tiles per row */
   padding: 20px;
+  max-width: 1200px;
 }
 
+/* Product Card Styling */
 .product-card {
-  background-color: #1B1B55;
+  background-color: #1b001c;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
@@ -74,6 +122,39 @@ header {
   padding: 10px;
 }
 
+.product-description {
+  font-size: 1em;
+  color: #FFDC80; /* Light yellow for descriptions */
+  padding: 5px 10px;
+}
+
 .product-price {
   font-size: 1.2em;
-  color: #
+  color: #F4A300;
+  margin-bottom: 10px;
+}
+
+/* Button Styling */
+button {
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  background-color: #FF4081;
+  color: white;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #FF79A6;
+}
+
+/* Add to Cart button styling */
+.add-to-cart {
+  background-color: #00C853; /* Green button */
+}
+
+.add-to-cart:hover {
+  background-color: #00E676;
+}

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>College Fest 2024</title>
+    <title>SYMPHONY 2025</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     <style>
         * {
@@ -14,8 +14,11 @@
         body {
             font-family: 'Roboto', sans-serif;
             line-height: 1.6;
-            background: linear-gradient(135deg, #ff4081, #2196f3);
             color: white;
+            background-image: url(home\ .jpg);
+            background-size: auto ;
+            background-position: center;
+       
         }
 
         /* Header */
@@ -58,18 +61,21 @@
             color: white;
             font-size: 1.3em;
             font-weight: bold;
+            font-style: italic;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
             transition: color 0.3s;
         }
 
         nav a:hover {
             color: #ffeb3b;
         }
-
-        /* Carousel */
+              /* Carousel */
         .carousel-container {
             position: relative;
-            width: 100%;
-            max-width: 1200px;
+            width: 120%;
+            left: -380px;
+
+            max-width: 500px;
             margin: 30px auto;
             overflow: hidden;
             border-radius: 10px;
@@ -92,7 +98,7 @@
             content: '';
             position: absolute;
             top: 50%;
-            transform: translateY(-50%);
+            transform: translateY(-100%);
             width: 0; 
             height: 0; 
             border-style: solid;
@@ -115,8 +121,9 @@
         .overview {
             padding: 60px 20px;
             text-align: center;
-            background: linear-gradient(135deg, orange , #ffeb3b, red);
+            background: linear-gradient(135deg, rgba(255, 166, 0, 0.911) , #ffeb3b, rgba(255, 0, 0, 0.884));
             color: #fff;
+            
         }
 
         .overview h2 {
@@ -127,10 +134,13 @@
 
         .overview p {
             font-size: 1.4em;
-            color: white;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-style: italic;
+            font-weight: 300;
             max-width: 800px;
             margin: 0 auto;
             line-height: 1.8;
+            
         }
 
         /* Event highlights section */
@@ -176,6 +186,59 @@
             color: #333;
         }
 
+        .aftermovies {
+            background-color: #333;
+            padding: 60px 20px;
+            text-align: center;
+            color: white;
+        }
+
+        .aftermovies h2 {
+            font-size: 3em;
+            margin-bottom: 30px;
+            color: #ffeb3b;
+        }
+
+        .aftermovie-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 20px;
+        }
+
+        .aftermovie-item iframe {
+            width: 100%;
+            height: 250px;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .about-us {
+            max-width: 800px;
+            width: 100%;
+            margin-left : 650px;
+            margin-top: -200px;
+            right: 200px; /* Adjust this to match the carousel shift */
+            color: rgb(0, 0, 0);
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.795);
+            border-radius: 10px;
+            box-shadow: 0 8px 20px rgb(0, 0, 0);
+        }
+
+        .about-us h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #ffeb3b;
+        }
+
+        .about-us p {
+            font-size: 1.5em;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+            line-height: 1.2;
+            color: burlywood;
+        }
+
         /* Footer */
         footer {
             background: #333;
@@ -189,18 +252,17 @@
         }
     </style>
 </head>
-<body>
 
     <!-- Header -->
     <header>
         <img src="SYMPHONY LOGO.png">
         <nav>
             <a href="Login.html">Login</a> 
-            <a href="#about">About</a>
-            <a href="#schedule">Schedule</a>
+            <a href="about.html">About</a>
+            <a href="Schedule.html">Schedule</a>
+            <a href="events.html">Rules</a>
             <a href="merch.html">Merch</a>
-            <a href="#rules">Rules</a>
-            <a href="#contact">Contact</a>
+            <a href="contacts.html">Contact</a>
 
             
             
@@ -216,42 +278,59 @@
         </div>
     </div>
 
+    <div class="about-us">
+        <h2></h2>
+        <p>Symphony is known for its vibrant celebration of talent, creativity, and youthful energy. It serves as a platform where students from various colleges come together to showcase their skills in music, dance, drama, art, and more.A  wide array of events like Battle of Bands, dance competitions, and literary contests, Symphony is not just a fest but a cultural phenomenon that embodies the spirit of artistic expression and camaraderie. Every year, Symphony creates unforgettable memories, fostering creativity and passion among students.</p>
+    </div>
+
     <!-- Overview Section -->
     <section class="overview">
-        <h2>About the Event</h2>
-        <p>Get ready for College Fest 2024 – three unforgettable days of music, dance, creativity, and fun! Join us for exciting competitions, workshops, and electrifying performances that will keep you on your feet. It's a celebration like no other!</p>
+        <p>Get ready for – three unforgettable days of music, dance, creativity.Full on exciting competitions, workshops, and electrifying performances that will keep you on your feet. It's a celebration like no other!</p>
     </section>
+
 
     <!-- Event Highlights Section -->
     <section class="event-highlights">
         <h2>Event Highlights</h2>
         <div class="highlights-grid">
             <div class="highlight-item">
-                <img src="https://via.placeholder.com/250x150.png?text=Music+Showcase" alt="Music Showcase">
-                <h3>Music Showcase</h3>
-                <p>Experience amazing live performances by top bands and solo artists from across the country.</p>
+                <img src="amit trivedi.jpg" alt="Music Showcase">
+                <h3>PRO SHOWS</h3>
+                <p>Experience amazing live performances by top artists Like AMIT TRIVEDI and many more.</p>
             </div>
             <div class="highlight-item">
-                <img src="https://via.placeholder.com/250x150.png?text=Dance+Battles" alt="Dance Battles">
-                <h3>Dance Battles</h3>
-                <p>Watch electrifying dance crews battle it out on stage with jaw-dropping moves.</p>
+                <img src="Pine exp.jpg" alt="Dance Battles">
+                <h3>Gunj of Bands</h3>
+                <p>Watch electrifying live performance by PINEAPPLE EXPRESS on stage with jaw-dropping music with diversity of deifferent genres of music.</p>
             </div>
             <div class="highlight-item">
-                <img src="https://via.placeholder.com/250x150.png?text=Art+Exhibition" alt="Art Exhibition">
-                <h3>Art Exhibition</h3>
-                <p>Marvel at the creative expressions of students through a stunning art exhibition.</p>
+                <img src="kryso.jpg" alt="Art Exhibition">
+                <h3>DJ NIGHT</h3>
+                <p>Make the most out of your energy by vibing on the beat of Dj's For that instance we have DJ KRYSO in the house.</p>
             </div>
-            <div class="highlight-item">
-                <img src="https://via.placeholder.com/250x150.png?text=Workshops" alt="Workshops">
-                <h3>Workshops</h3>
-                <p>Engage in fun and interactive workshops on music, dance, and creative arts.</p>
-            </div>
+            
         </div>
     </section>
 
+        <!-- Aftermovies Section -->
+        <section class="aftermovies">
+            <h2>Aftermovies</h2>
+            <div class="aftermovie-grid">
+                <div class="aftermovie-item">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/BOy-iA0fU3k?si=ft0rVnjJPynQwA-_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <div class="aftermovie-item">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/mIBRug2k0qw?si=T808nW8gw17KKGW8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <div class="aftermovie-item">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/6NB35IHme8o?si=cG7mszZUOjBVM96f" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+
     <!-- Footer -->
     <footer>
-        <p>&copy; 2024 College Fest. All Rights Reserved.</p>
+        <p>&copy; K.J.Somaiya College Of Engineering ,Vidyavihar Mumbai . All Rights Reserved.</p>
     </footer>
 
     <!-- JavaScript for Automatic Slideshow -->

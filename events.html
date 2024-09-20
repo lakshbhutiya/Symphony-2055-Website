@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Registration - SYMPHONY 2025</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Righteous&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-image: url(kjsce\ entry.jpeg);
+            
+            background-size: cover;
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 50px auto;
+            top: 100px;
+            padding: 30px;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            position: relative;
+            overflow: hidden;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 3.5em;
+            color: #ffeb3b;
+            font-family: 'Righteous', cursive;
+            text-shadow: 3px 3px 6px #000;
+            margin-bottom: 30px;
+            animation: bounceIn 1s ease-out;
+        }
+
+        @keyframes bounceIn {
+            0% { transform: scale(0.3); opacity: 0; }
+            50% { transform: scale(1.1); opacity: 1; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        .event-section {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .event {
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid #ffeb3b;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.4);
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.5s, box-shadow 0.5s;
+        }
+
+        .event:hover {
+            transform: scale(1.05);
+            box-shadow: 0 20px 30px rgba(0, 0, 0, 0.6);
+        }
+
+        .event h2 {
+            font-size: 2.5em;
+            color: #ffeb3b;
+            margin-bottom: 15px;
+            font-family: 'Righteous', cursive;
+            text-shadow: 2px 2px 4px #000;
+            animation: fadeIn 1s ease-out;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        .event p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        .event ul {
+            margin-bottom: 20px;
+        }
+
+        .event ul li {
+            margin-bottom: 10px;
+        }
+
+        .register-button {
+            display: block;
+            width: 200px;
+            margin: 20px auto;
+            padding: 10px;
+            background: #ffeb3b;
+            color: #000;
+            text-align: center;
+            text-decoration: none;
+            font-size: 1.2em;
+            font-weight: bold;
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+        }
+
+        .register-button:hover {
+            background: #fdd835;
+            transform: scale(1.1);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .event img {
+            width: 100%;
+            height: auto;
+            border-radius: 15px;
+            border: 5px solid #ffeb3b;
+            transition: transform 0.5s, box-shadow 0.5s;
+        }
+
+        .event img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+        }
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            background-color: rgb(0, 0, 0); /* Semi-transparent background */
+            z-index: 10;
+        }
+        header .logo img {
+            width: 180px;
+            height: 60px;
+        }
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            gap: 20px;
+        }
+        nav ul li {
+            display: inline-block;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: chartreuse;
+            font-size: 20px;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        nav ul li a:hover {
+            color: #ff4081;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="kjsce.png" alt="Fest Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="Schedule.html">Schedule</a></li>
+                <li><a href="events.html">Rules</a></li>
+                <li><a href="merch.html">Merch</a></li>
+                <li><a href="contacts.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>Register for Our Exciting Events!</h1>
+
+        <!-- Event Sections -->
+        <div class="event-section">
+
+            <!-- Battle of Bands -->
+            <div class="event">
+               
+                <h2>Battle of Bands</h2>
+                <p>Get ready for an epic showdown as bands from all over compete in the Battle of Bands. Show off your musical prowess and claim your spot as the best band!</p>
+                <p><strong>Rules:</strong></p>
+                <ul>
+                    <li>Each band must have 3-7 members.</li>
+                    <li>Performance duration should be 10-15 minutes.</li>
+                    <li>Participants must bring their own equipment.</li>
+                    <li>team would be disqualified if time exceeds</li>
+                </ul>
+                <a href="#" class="register-button">Register Now</a>
+            </div>
+
+            <!-- Decibels -->
+            <div class="event">
+              
+                <h2>Decibels</h2>
+                <p>Join Decibels to showcase your vocal or instrumental talent. Whether you're a solo performer or part of a group, this is your chance to shine!</p>
+                <p><strong>Rules:</strong></p>
+                <ul>
+                    <li>Performances can be solo or in groups.</li>
+                    <li>Performance time should be 5-10 minutes.</li>
+                    <li>Original music is encouraged but covers are allowed.</li>
+                </ul>
+                <a href="#" class="register-button">Register Now</a>
+            </div>
+
+            <!-- Grovers -->
+            <div class="event">
+                
+                <h2>Grovers</h2>
+                <p>Get ready to groove with Grovers! This is where dance enthusiasts from all genres come together to showcase their best moves and routines.</p>
+                <p><strong>Rules:</strong></p>
+                <ul>
+                    <li>Groups of 4-10 dancers are allowed.</li>
+                    <li>Routine duration should be 3-7 minutes.</li>
+                    <li>Props are allowed but must be cleared within the allotted time.</li>
+                </ul>
+                <a href="#" class="register-button">Register Now</a>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

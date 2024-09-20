@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - SYMPHONY 2025</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Righteous&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            background-image: url(kjsce\ entry.jpeg);
+            
+            background-size: cover;
+            color: #fff;
+            overflow: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 50px auto;
+            bottom: -100px;
+            padding: 30px;
+            background: rgba(0, 0, 0, 0.486);
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgb(0, 0, 0);
+            position: relative;
+            height: 90vh;
+            overflow-y: auto;
+        }
+
+        .container h1 {
+            text-align: center;
+            font-size: 4em;
+            color: #ffeb3b;
+            font-family: 'Righteous', cursive;
+            text-shadow: 3px 3px 6px #000;
+            margin-bottom: 30px;
+            animation: bounceIn 1s ease-out;
+        }
+
+        @keyframes bounceIn {
+            0% { transform: scale(0.3); opacity: 0; }
+            50% { transform: scale(1.1); opacity: 1; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        .team-section {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        .team {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+            position: relative;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .team.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .team img {
+            width: 500px; /* Adjust size as needed */
+            height: 300px; /* Adjust size as needed */
+            object-fit: cover;
+            border-radius: 10px;
+            border: 5px solid #ffeb3b;
+            animation: rotateIn 1s ease-out;
+        }
+
+        @keyframes rotateIn {
+            from {
+                transform: rotate(-360deg);
+                opacity: 0;
+            }
+            to {
+                transform: rotate(0);
+                opacity: 1;
+            }
+        }
+
+        .team-info {
+            flex: 1;
+            color: #ffffffd9;
+        }
+
+        .team-info h2 {
+            font-size: 2.5em;
+            color: #ffeb3b;
+            margin-bottom: 15px;
+            font-family: 'Righteous', cursive;
+            text-shadow: 2px 2px 4px #000;
+        }
+
+        .team-info p {
+            font-size: 1.2em;
+            line-height: 1.8;
+        }
+
+        /* Adjust positioning for alternating layout */
+        .team:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        /* Custom scrollbar */
+        .container::-webkit-scrollbar {
+            width: 12px;
+        }
+
+        .container::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.3);
+        }
+
+        .container::-webkit-scrollbar-thumb {
+            background: #ffeb3b;
+            border-radius: 10px;
+        }
+
+        .container::-webkit-scrollbar-thumb:hover {
+            background: #ffeb3b;
+
+        }
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            background-color: rgb(0, 0, 0); /* Semi-transparent background */
+            z-index: 10;
+        }
+        header .logo img {
+            width: 180px;
+            height: 60px;
+        }
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            gap: 20px;
+        }
+        nav ul li {
+            display: inline-block;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: chartreuse;
+            font-size: 20px;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        nav ul li a:hover {
+            color: #ff4081;
+        }
+    </style>
+</head>
+<body>
+    
+    <header>
+        <div class="logo">
+            <img src="kjsce.png" alt="Fest Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="Schedule.html">Schedule</a></li>
+                <li><a href="events.html">Rules</a></li>
+                <li><a href="merch.html">Merch</a></li>
+                <li><a href="contacts.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>Meet Our Cultural Teams!</h1>
+        
+        <!-- Section for the Teams -->
+        <div class="team-section" id="team-section">
+
+            <!-- Octavium -->
+            <div class="team">
+                <img src="octavium.jpeg" alt="Octavium Logo">
+                <div class="team-info">
+                    <h2>Octavium</h2>
+                    <p >Octavium, the official band of KJ Somaiya College of Engineering, Mumbai, is a musical band where
+                        harmonies merge and rhythms resonate! Thriving in competitions, Octavium values dedication over
+                        accolades, gaining exposure and networking opportunities.</p>
+                </div>
+            </div>
+
+            <!-- Palinoia -->
+            <div class="team">
+                <img src="pallinoia.jpeg" alt="Palinoia Logo">
+                <div class="team-info">
+                    <h2>Palinoia</h2>
+                    <p>Palinoia represents the Indian classical dance  wing of the cultural fest. With mind-blowing expressions, and stellar performances, this team brings India cultural and the ethinicity of classical dance form.</p>
+                </div>
+            </div>
+
+            <!-- Rhapsody -->
+            <div class="team">
+                <img src="rhapsody.jpeg" alt="Rhapsody Logo">
+                <div class="team-info">
+                    <h2>Rhapsody</h2>
+                    <p>Rhapsody Is the Official Drama team of Kjsce, their plays and drama make every one toughtful and exciting about various topics in society.</p>
+                </div>
+            </div>
+
+            <!-- Gyrations -->
+            <div class="team">
+                <img src="gyrations.jpeg" alt="Gyrations Logo">
+                <div class="team-info">
+                    <h2>Gyrations</h2>
+                    <p>Gyrations is the dance squad that electrifies the stage with powerful moves. From hip-hop to classical dance forms, Gyrations captivates the audience with their breathtaking choreography.</p>
+                </div>
+            </div>
+
+            <!-- Yugandhar -->
+            <div class="team">
+                <img src="https://via.placeholder.com/500x300.png?text=Yugandhar" alt="Yugandhar Logo">
+                <div class="team-info">
+                    <h2>Yugandhar</h2>
+                    <p>Yugandhar is the brain behind the intellectual side of the fest, organizing debates, quizzes, and brain-teasing challenges. They foster creativity through knowledge and critical thinking.</p>
+                </div>
+            </div>
+
+            <!-- Insignia -->
+            <div class="team">
+                <img src="insignia.jpeg" alt="Insignia Logo">
+                <div class="team-info">
+                    <h2>Insignia</h2>
+                    <p>Insignia represents the visual and fine arts team. Whether it's painting, sketching, or sculpture, this team turns imagination into masterpieces, spreading art across the campus.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- JavaScript for Scroll Animation -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const teamSections = document.querySelectorAll('.team');
+            const sectionObserver = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, {
+                threshold: 0.5 // Adjust visibility threshold as needed
+            });
+
+            teamSections.forEach(section => {
+                sectionObserver.observe(section);
+            });
+        });
+    </script>
+
+</body>
+</html>
